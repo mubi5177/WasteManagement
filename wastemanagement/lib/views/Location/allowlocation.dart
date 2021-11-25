@@ -15,7 +15,7 @@ class _AllowLocationState extends State<AllowLocation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(134, 67, 28, 1),
+      backgroundColor: Theme.of(context).primaryColor,
       body: Container(
         height: height,
         width: width,
@@ -45,7 +45,10 @@ class _AllowLocationState extends State<AllowLocation> {
               children: [
                 SizedBox.square(
                     dimension: 50,
-                    child: Image.asset("assets/icons/User location.png")),
+                    child: Image.asset(
+                      "assets/icons/User location.png",
+                      color: Theme.of(context).primaryColor,
+                    )),
                 Padding(
                     padding: const EdgeInsets.only(top: 12.0, bottom: 20),
                     child: Text(
@@ -67,7 +70,7 @@ class _AllowLocationState extends State<AllowLocation> {
                     children: [
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Color.fromRGBO(203, 101, 43, 1),
+                          primary: Theme.of(context).primaryColor,
                           fixedSize:
                               Size(MediaQuery.of(context).size.width / 2, 45),
                           shape: RoundedRectangleBorder(
@@ -135,7 +138,7 @@ class _AllowLocationState extends State<AllowLocation> {
                           style: TextStyle(
                             fontSize: 17,
                             fontWeight: FontWeight.bold,
-                            color: Color.fromRGBO(203, 101, 43, 1),
+                            color: Theme.of(context).primaryColor,
                           ),
                         ),
                       ),
