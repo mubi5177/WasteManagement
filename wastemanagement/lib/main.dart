@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:wastemanagement/views/shops/product.dart';
+import 'package:wastemanagement/views/splash/splash.dart';
 
-import 'views/splash/splash.dart';
+import 'views/CustomerChatAndCustomize/customize.dart';
 
 void main() {
+  // WidgetsFlutterBinding.ensureInitialized();
+
+  // await Firebase.initializeApp();
   runApp(MyApp());
 }
 

@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:location/location.dart';
 import 'package:wastemanagement/views/home/homePage.dart';
 
 import '../../const.dart';
@@ -14,6 +13,8 @@ class AllowLocation extends StatefulWidget {
 class _AllowLocationState extends State<AllowLocation> {
   @override
   Widget build(BuildContext context) {
+    var height = MediaQuery.of(context).size.height;
+    var width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
       body: Container(
@@ -78,33 +79,34 @@ class _AllowLocationState extends State<AllowLocation> {
                           ),
                         ),
                         onPressed: () {
-                          Location().getLocation().then((value) {
-                            userLatitude = value.latitude;
-                            userLongitude = value.longitude;
-                            print("Latitude: $userLatitude");
-                            print("Longitude: $userLongitude");
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => HomePage(),
-                              ),
-                            );
-                            // if (isFirstTime) {
-                            //   Navigator.push(
-                            //     context,
-                            //     MaterialPageRoute(
-                            //       builder: (context) => LoadingScreen(),
-                            //     ),
-                            //   );
-                            // } else {
-                            //   Navigator.push(
-                            //     context,
-                            //     MaterialPageRoute(
-                            //       builder: (context) => HomePage(),
-                            //     ),
-                            //   );
-                            // }
-                          });
+                          // Location().getLocation().then((value) {
+                          //   userLatitude = value.latitude;
+                          //   userLongitude = value.longitude;
+                          //   print("Latitude: $userLatitude");
+                          //   print("Longitude: $userLongitude");
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Home(),
+                            ),
+                          );
+                          // if (isFirstTime) {
+                          //   Navigator.push(
+                          //     context,
+                          //     MaterialPageRoute(
+                          //       builder: (context) => LoadingScreen(),
+                          //     ),
+                          //   );
+                          // } else {
+                          //   Navigator.push(
+                          //     context,
+                          //     MaterialPageRoute(
+                          //       builder: (context) => HomePage(),
+                          //     ),
+                          //   );
+                          // }
+                          // }
+                          // );
                         },
                         child: Text(
                           'Allow',
@@ -128,7 +130,7 @@ class _AllowLocationState extends State<AllowLocation> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => HomePage(),
+                              builder: (context) => Home(),
                             ),
                           );
                         },

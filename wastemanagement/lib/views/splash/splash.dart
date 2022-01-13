@@ -6,8 +6,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:wastemanagement/views/Location/allowlocation.dart';
 
-import '../../const.dart';
-
 class Splash extends StatefulWidget {
   @override
   _SplashState createState() => _SplashState();
@@ -27,8 +25,8 @@ class _SplashState extends State<Splash> {
 
   @override
   Widget build(BuildContext context) {
-    height = MediaQuery.of(context).size.height;
-    width = MediaQuery.of(context).size.width;
+    var height = MediaQuery.of(context).size.height;
+    var width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.white,
       body: Container(
